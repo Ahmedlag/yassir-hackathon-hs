@@ -1,0 +1,7 @@
+{
+  "name": "yassir-home-services-proto",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
