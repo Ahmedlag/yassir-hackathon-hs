@@ -1,0 +1,201 @@
+<div class="header">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="1">
+        <ion-icon name="arrow-back" (click)="goBack()"></ion-icon>
+      </ion-col>
+      <ion-col>
+        <ion-progress-bar value="0.5" color="primary"></ion-progress-bar>
+      </ion-col>
+      <ion-col size="1">
+        <ion-icon name="close" (click)="close()"></ion-icon>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-text>
+          <h1>
+            Home cleaning
+          </h1>
+        </ion-text>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</div>
+<ion-content *ngIf="false">
+  <ion-slides #stepperSlider>
+    <ion-slide>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-text class="simpleText">
+              Give us a few details about you request
+            </ion-text>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-textarea class="customInput" placeholder="Details (optional)..."></ion-textarea>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-grid style="margin-top: 20px;">
+        <ion-row>
+          <ion-col>
+            <ion-text class="simpleText">
+              Where shall the service be provided ?
+            </ion-text>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-card (click)="openMap()">
+              <ion-item lines="none">
+                <ion-icon name="pin" slot="start" color="primary" size="small"></ion-icon>
+                <ion-label>
+                  <h2>Home</h2>
+                  <p>1234 Main St, San Francisco, CA 94122</p>
+                </ion-label>
+                <ion-icon name="locate-outline" slot="end" color="medium" size="small"></ion-icon>
+              </ion-item>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+    <ion-slide>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-text class="simpleText">
+              When do you need the service ?
+            </ion-text>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-datetime locale="en-GB" color="primary" (ionChange)="updateDate($event)"></ion-datetime>
+    </ion-slide>
+    <ion-slide>
+
+    </ion-slide>
+  </ion-slides>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="nextSlide()" expand="block" color="primary" class="bottomButton">Continue</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-text class="simpleText">
+          Congratulation your offer is online
+        </ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-img src="../assets/done.svg"></ion-img>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid style="margin-top: 20px;">
+    <ion-row>
+      <ion-col>
+        <ion-text>
+          <h3>
+            Recommended providers
+          </h3>
+        </ion-text>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card class="candidate">
+          <ion-item lines="none">
+            <ion-avatar slot="start">
+              <img src="https://xsgames.co/randomusers/avatar.php?g=male">
+            </ion-avatar>
+            <ion-label>
+              <h2>Zakaria Doe <span class="statusBadges">Pro</span></h2>
+              <p>5.0 <ion-icon name="star" color="warning"></ion-icon> (12 reviews)</p>
+            </ion-label>
+            <ion-badge slot="end" class="priceBadge">3 000 DZA</ion-badge>
+          </ion-item>
+          <ion-card-content>
+            <ion-text color="medium" style="font-size: 14px;">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec
+              tincidunt
+            </ion-text>
+            <ion-button expand="block" color="primary" style="margin-top: 10px;">Hire now</ion-button>
+          </ion-card-content>
+        </ion-card>
+        <ion-card class="candidate">
+          <ion-item lines="none">
+            <ion-avatar slot="start">
+              <img src="https://xsgames.co/randomusers/avatar.php?g=female">
+            </ion-avatar>
+            <ion-label>
+              <h2>Célia Smith <span class="statusBadges">Pro</span></h2>
+              <p>5.0 <ion-icon name="star" color="warning"></ion-icon> (45 reviews)</p>
+            </ion-label>
+            <ion-badge slot="end" class="priceBadge">3 200 DZA</ion-badge>
+          </ion-item>
+          <ion-card-content>
+            <ion-text color="medium" style="font-size: 14px;">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec
+              tincidunt
+            </ion-text>
+            <ion-button expand="block" color="primary" style="margin-top: 10px;">Hire now</ion-button>
+          </ion-card-content>
+        </ion-card>
+        <ion-card class="candidate">
+          <ion-item lines="none">
+            <ion-avatar slot="start">
+              <img src="https://xsgames.co/randomusers/avatar.php?g=male">
+            </ion-avatar>
+            <ion-label>
+              <h2>Yassine Deep</h2>
+              <p>4.9 <ion-icon name="star" color="warning"></ion-icon> (78 reviews)</p>
+            </ion-label>
+            <ion-badge slot="end" class="priceBadge">3 400 DZA</ion-badge>
+          </ion-item>
+          <ion-card-content>
+            <ion-text color="medium" style="font-size: 14px;">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec
+              tincidunt
+            </ion-text>
+            <ion-button expand="block" color="primary" style="margin-top: 10px;">Hire now</ion-button>
+          </ion-card-content>
+        </ion-card>
+
+        <ion-card class="candidate">
+          <ion-item lines="none">
+            <ion-avatar slot="start">
+              <img src="https://xsgames.co/randomusers/avatar.php?g=male">
+            </ion-avatar>
+            <ion-label>
+              <h2>Zakaria Doe <span class="statusBadges">Pro</span></h2>
+              <p>5.0 <ion-icon name="star" color="warning"></ion-icon> (12 reviews)</p>
+            </ion-label>
+            <ion-badge slot="end" class="priceBadge">3 000 DZA</ion-badge>
+          </ion-item>
+          <ion-card-content>
+            <ion-text color="medium" style="font-size: 14px;">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec
+              tincidunt
+            </ion-text>
+            <ion-button expand="block" color="primary" style="margin-top: 10px;">Hire now</ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

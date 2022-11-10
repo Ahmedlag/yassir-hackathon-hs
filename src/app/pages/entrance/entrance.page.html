@@ -1,0 +1,19 @@
+<ion-content fullscreen="true" scrollY="false">
+  <div id="logo" class="animate__animated animate__zoomIn">
+    <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+         viewBox="0 0 20 33" style="enable-background:new 0 0 20 33;" xml:space="preserve">
+    <style type="text/css">
+      .st0{fill:#FFFFFF;}
+    </style>
+      <path class="st0" d="M13,14.5L6.7,1.9C6.1,0.8,4.9,0,3.5,0C0.9,0-0.8,2.7,0.4,5l4.8,9.5c0.5,1,0.5,2.1,0,3.1L0.4,27
+      c-1.2,2.3,0.5,5,3.2,5c1.3,0,2.6-0.7,3.2-1.9L13,17.6C13.5,16.6,13.5,15.4,13,14.5z"/>
+      <path class="st0" d="M11.2,6.1C9.7,3.3,11.8,0,15,0c3.1,0,5.2,3.2,3.9,6l-2.9,5.7c-0.4,0.7-1.5,0.7-1.9,0L11.2,6.1z"/>
+    </svg>
+  </div>
+  <ion-img src="../assets/house-shape.svg" (click)="active = true" class="animate__animated animate__flip"></ion-img>
+  <ion-spinner name="crescent" *ngIf="showSpinner" class="animate__animated animate__fadeIn"></ion-spinner>
+  <ion-text style="display: block; position: absolute; width: 100%; bottom: 50px; text-align: center;">
+    <h3 class="animate__animated animate__fadeInUp">Yassir home Services</h3>
+    <p class="animate__animated animate__fadeInUp">Made with love</p>
+  </ion-text>
+</ion-content>

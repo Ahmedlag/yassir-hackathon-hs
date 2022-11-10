@@ -1,0 +1,40 @@
+ion-content {
+  --padding-bottom: 80px;
+}
+
+.cardsHolder {
+  ion-col {
+    padding: 10px;
+    margin: 0;
+    .cards {
+      box-shadow: none;
+      height: 90px;
+      width: 100%;
+      max-width: 180px;
+      margin: auto;
+    }
+    h5 {
+      margin-top: 10px;
+    }
+  }
+
+}
+.titles {
+  padding: 0 10px;
+}
+
+.list-item {
+  margin: 0;
+  padding: 0;
+  ion-label {
+    margin: 0;
+    padding: 0;
+  }
+  ion-item {
+    --padding-start: 0;
+  }
+  ion-row {
+    margin: 15px 0;
+  }
+}
+

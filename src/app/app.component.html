@@ -1,3 +1,30 @@
 <ion-app>
   <ion-router-outlet></ion-router-outlet>
+  <div id="bottomTab" [ngClass]="{'active': isActive}" class="animate__animated animate__slideInUp">
+    <div id="button" (click)="startNewOrder()" class="spin">
+      <ion-icon name="add-circle"></ion-icon>
+    </div>
+    <ion-grid>
+      <ion-row >
+        <ion-col (click)="selected = 'home'" [ngClass]="{'active' : selected === 'home'}">
+          <ion-icon [name]="selected === 'home' ? 'home' : 'home-outline'" [color]="selected === 'home' ? 'primary' : 'medium'"></ion-icon>
+        </ion-col>
+        <ion-col (click)="selected = 'newspaper'" [ngClass]="{'active' : selected === 'newspaper'}">
+          <ion-icon [name]="selected === 'newspaper' ? 'newspaper' : 'newspaper-outline'" [color]="selected === 'newspaper' ? 'primary' : 'medium'"></ion-icon>
+        </ion-col>
+        <ion-col>
+        </ion-col>
+        <ion-col (click)="selected = 'chatbubbles'" [ngClass]="{'active' : selected === 'chatbubbles'}">
+          <ion-icon [name]="selected === 'chatbubbles' ? 'chatbubbles' : 'chatbubbles-outline'" [color]="selected === 'chatbubbles' ? 'primary' : 'medium'"></ion-icon>
+        </ion-col>
+        <ion-col (click)="selected = 'person'" [ngClass]="{'active' : selected === 'person'}">
+          <ion-icon [name]="selected === 'person' ? 'person' : 'person-outline'" [color]="selected === 'person' ? 'primary' : 'medium'"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <div class="cache left"></div>
+    <div class="cache right"></div>
+    <div class="cache bottom"></div>
+  </div>
+  <div id="bottomTabShadow" [ngClass]="{'active': isActive}" class="animate__animated animate__slideInUp"></div>
 </ion-app>

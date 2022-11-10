@@ -1,0 +1,186 @@
+<ion-content>
+  <ion-grid class="nameHeader animate__animated animate__bounceInLeft">
+    <ion-row>
+      <ion-col>
+        <ion-text>
+          <h1>
+            Hi, Yassine
+          </h1>
+        </ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-text>
+          How can we serve you today?
+        </ion-text>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="customInput">
+          <input type="phone" placeholder="Search..."/>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid style="margin-top: 20px;">
+    <ion-row>
+      <ion-col class="titles">
+        <h4>What service do you need?</h4>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid class="cardsHolder">
+    <ion-row>
+      <ion-col class="animate__animated animate__bounceIn" (click)="selectedCategory('Maintenance')">
+        <ion-card class="cards">
+          <ion-img src="../assets/home/maintenance.svg"></ion-img>
+        </ion-card>
+        <h5>Maintenance</h5>
+      </ion-col>
+      <ion-col class="animate__animated animate__bounceIn" (click)="selectedCategory('Gardening')">
+        <ion-card class="cards">
+          <ion-img src="../assets/home/gardening.svg"></ion-img>
+        </ion-card>
+        <h5>Gardening</h5>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="animate__animated animate__bounceIn" (click)="selectedCategory('Children')">
+        <ion-card class="cards">
+          <ion-img src="../assets/home/childcare.svg"></ion-img>
+        </ion-card>
+        <h5>Children</h5>
+      </ion-col>
+      <ion-col class="animate__animated animate__bounceIn" (click)="selectedCategory('Housework')">
+        <ion-card class="cards">
+          <ion-img src="../assets/home/cleaning.svg"></ion-img>
+        </ion-card>
+        <h5>Housework</h5>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="animate__animated animate__bounceIn" (click)="selectedCategory('Private classes')">
+        <ion-card class="cards">
+          <ion-img src="../assets/home/private-classes.svg"></ion-img>
+        </ion-card>
+        <h5>Private classes</h5>
+      </ion-col>
+      <ion-col class="animate__animated animate__bounceIn" (click)="selectedCategory('Packers')">
+        <ion-card class="cards">
+          <ion-img src="../assets/home/packers.svg"></ion-img>
+        </ion-card>
+        <h5>Packers</h5>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid style="margin-top: 20px;">
+    <ion-row>
+      <ion-col class="titles">
+        <h4>Most used</h4>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid class="cardsHolder">
+    <ion-row>
+      <ion-col class="animate__animated animate__bounceIn" (click)="selectedCategory('Car wash')">
+        <ion-card class="cards">
+          <ion-img src="../assets/home/carwash.svg"></ion-img>
+        </ion-card>
+        <h5>Car wash</h5>
+        <ion-chip color="danger">8 DZD - 16 DZD</ion-chip>
+      </ion-col>
+      <ion-col>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid style="margin-top: 20px; margin-bottom: 20px">
+    <ion-row>
+      <ion-col class="titles">
+        <h4>All Yassir warranties</h4>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid class="list-item">
+    <ion-row>
+      <ion-col style="padding: 0 10px;">
+        <ion-item lines="none">
+          <ion-thumbnail slot="start">
+            <img alt="" src="./assets/menu-icons/phone.svg" />
+          </ion-thumbnail>
+          <ion-label>
+            <ion-text>All profiles verified</ion-text>
+            <p>We control who comes to you</p>
+          </ion-label>
+          <ion-icon name="chevron-forward-outline" slot="end" color="medium"></ion-icon>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col style="padding: 0 10px;">
+        <ion-item lines="none">
+          <ion-thumbnail slot="start">
+            <img alt="" src="./assets/menu-icons/check.svg" />
+          </ion-thumbnail>
+          <ion-label>
+            <ion-text>Qualified providers</ion-text>
+            <p>we promote the best rates</p>
+          </ion-label>
+          <ion-icon name="chevron-forward-outline" slot="end" color="medium"></ion-icon>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col style="padding: 0 10px;">
+        <ion-item lines="none">
+          <ion-thumbnail slot="start">
+            <img alt="" src="./assets/menu-icons/thumbs-up.svg" />
+          </ion-thumbnail>
+          <ion-label>
+            <ion-text>Insured services</ion-text>
+            <p>Full insurance without deductible</p>
+          </ion-label>
+          <ion-icon name="chevron-forward-outline" slot="end" color="medium"></ion-icon>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col style="padding: 0 10px;">
+        <ion-item lines="none">
+          <ion-thumbnail slot="start">
+            <img alt="" src="./assets/menu-icons/cancel-assure.svg" />
+          </ion-thumbnail>
+          <ion-label>
+            <ion-text>Cancellation protection</ion-text>
+            <p>accompaniment in case of unforeseen</p>
+          </ion-label>
+          <ion-icon name="chevron-forward-outline" slot="end" color="medium"></ion-icon>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col style="padding: 0 10px;">
+        <ion-item lines="none">
+          <ion-thumbnail slot="start">
+            <img alt="" src="./assets/menu-icons/payment.svg" />
+          </ion-thumbnail>
+          <ion-label>
+            <ion-text>Secure payments</ion-text>
+            <p>Verified and secure transactions</p>
+          </ion-label>
+          <ion-icon name="chevron-forward-outline" slot="end" color="medium"></ion-icon>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

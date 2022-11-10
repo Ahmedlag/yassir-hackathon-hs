@@ -1,0 +1,35 @@
+.customInput {
+  width: 90%;
+  max-width: 340px;
+  margin: auto;
+  display: block;
+  height: 48px;
+  padding: 2px;
+  input {
+    width: calc(100% - 100px);
+    margin-left: 92px;
+    border: none;
+    height: 100%;
+    &:focus {
+      border-bottom: none !important;
+      background-color: transparent;
+      outline: none;
+    }
+  }
+  .smallButton {
+    height: 36px;
+    width: 90px;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--ion-color-light);
+    position: absolute;
+    border-radius: 4px;
+    margin: 2px;
+    font-size: 14px;
+    ion-img {
+      margin-right: 5px;
+    }
+  }
+}

@@ -1,0 +1,76 @@
+ion-content {
+
+}
+.header {
+  width: 100%;
+  height: 100px;
+  ion-grid {
+    min-height: 60px;
+    height: 60px;
+    ion-row {
+      height: 100%;
+      ion-col {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        ion-icon {
+          font-size: 24px;
+          transition: all 0.3s ease;
+          &:active {
+            transform: scale(0.9);
+            color: var(--ion-color-primary);
+          }
+        }
+      }
+    }
+  }
+}
+.titles {
+  padding: 0 10px;
+}
+
+ion-textarea {
+  min-height: 200px;
+}
+ion-slides {
+  height: calc(100% - 90px);
+  ion-slide {
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    text-align: initial;
+  }
+}
+ion-card {
+  margin: 10px auto;
+  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.1);
+}
+ion-datetime {
+  margin: 20px auto;
+  border-radius: 20px;
+  box-shadow: 8.51948px 3.19481px 23.4286px 10.6494px rgba(150, 150, 150, 0.11);
+  background: #FFFFFF;
+}
+
+.candidate {
+  .priceBadge {
+    background-color: transparent;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .statusBadges {
+    color: #FFFFFF;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-block;
+    background-color: var(--ion-color-primary);
+    padding: 3px 10px;
+  }
+  h2 {
+    font-size: 14px;
+    font-weight: 600;
+  }
+}

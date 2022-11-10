@@ -1,0 +1,27 @@
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div style="width: 100%; height: 80vh;"></div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid >
+    <ion-row>
+      <ion-col>
+        <div class="customInput">
+          <div class="smallButton"><ion-img src="assets/dz.svg" alt="The Wisconsin State Capitol building in Madison, WI at night"></ion-img>+213</div>
+          <input type="phone" placeholder="Phone Number" />
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="block" class="customButton" style="color: #fff;" (click)="go()" [disabled]="isLoading">
+          <ion-text *ngIf="!isLoading">Connexion</ion-text>
+          <ion-spinner name="crescent" *ngIf="isLoading"></ion-spinner>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

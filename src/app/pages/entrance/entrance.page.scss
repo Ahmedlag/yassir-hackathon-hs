@@ -1,0 +1,32 @@
+ion-content {
+  position: relative;
+}
+ion-img {
+  width: 100px;
+  border: 1px solid white;
+  margin: auto;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: 0;
+}
+#logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -45%;
+  height: 80px;
+  width: 35px;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+}
+ion-spinner {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: 2;
+}
