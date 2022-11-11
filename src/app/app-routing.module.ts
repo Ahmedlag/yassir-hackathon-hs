@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'entrance',
     pathMatch: 'full'
   },
   {
@@ -34,6 +34,30 @@ const routes: Routes = [
   {
     path: 'categories',
     loadChildren: () => import('./pages/categories/categories.module').then( m => m.CategoriesPageModule)
+  },
+  {
+    path: 'done',
+    loadChildren: () => import('./pages/done/done.module').then( m => m.DonePageModule)
+  },
+  {
+    path: 'requests',
+    loadChildren: () => import('./pages/requests/requests.module').then( m => m.RequestsPageModule)
+  },
+  {
+    path: 'request-details',
+    loadChildren: () => import('./pages/request-details/request-details.module').then( m => m.RequestDetailsPageModule)
+  },
+  {
+    path: 'jobber-details',
+    loadChildren: () => import('./pages/jobber-details/jobber-details.module').then( m => m.JobberDetailsPageModule)
+  },
+  {
+    path: 'hire',
+    loadChildren: () => import('./pages/hire/hire.module').then( m => m.HirePageModule)
+  },
+  {
+    path: 'chat',
+    loadChildren: () => import('./pages/chat/chat.module').then( m => m.ChatPageModule)
   }
 ];
 

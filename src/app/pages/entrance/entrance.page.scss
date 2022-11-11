@@ -4,12 +4,11 @@ ion-content {
 ion-img {
   width: 100px;
   border: 1px solid white;
-  margin: auto;
+  margin: -52px auto auto -50px;
   display: block;
   position: absolute;
   top: 50%;
   left: 50%;
-  translate: -50% -50%;
   z-index: 0;
 }
 #logo {

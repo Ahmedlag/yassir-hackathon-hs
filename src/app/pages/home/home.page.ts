@@ -19,8 +19,8 @@ export class HomePage implements OnInit {
     this.sharedServices.toggleMenu(true);
   }
 
-  selectedCategory(category) {
-    this.sharedServices.setCategory(category);
+  selectService(service) {
+    this.sharedServices.setService(service);
     this.nav.navigateForward('/services');
   }
 

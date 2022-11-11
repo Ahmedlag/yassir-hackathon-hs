@@ -156,3 +156,50 @@ ion-progress-bar {
   40% { transform: rotate(360deg); }
   100% { transform: rotate(360deg); }
 }
+.candidate {
+  .priceBadge {
+    background-color: transparent;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .statusBadges {
+    color: #FFFFFF;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-block;
+    background-color: var(--ion-color-primary);
+    padding: 3px 10px;
+  }
+  h2 {
+    font-size: 14px;
+    font-weight: 600;
+  }
+}
+.requestList {
+  padding: 10px;
+  width: 95%;
+  ion-row {
+    background-color: var(--ion-color-light);
+    border-radius: 16px;
+    padding: 10px;
+    border-radius: 16px;
+  }
+  h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+  }
+  ion-col {
+    border-radius: 16px;
+    ion-thumbnail {
+      border-radius: 16px;
+      margin: auto;
+      height: 55px;
+      width: 55px;
+      img {
+        border-radius: 16px;
+      }
+    }
+  }
+}

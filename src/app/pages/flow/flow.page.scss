@@ -34,7 +34,7 @@ ion-textarea {
   min-height: 200px;
 }
 ion-slides {
-  height: calc(100% - 90px);
+  height: calc(100% - 190px);
   ion-slide {
     display: block;
     height: 100%;
@@ -54,23 +54,33 @@ ion-datetime {
   background: #FFFFFF;
 }
 
-.candidate {
-  .priceBadge {
-    background-color: transparent;
-    font-size: 14px;
-    font-weight: 600;
+
+.loading-img {
+  width: 80%;
+  margin: auto;
+  --animate-duration: 1s;
+  &.hide {
+    display: none;
   }
-  .statusBadges {
-    color: #FFFFFF;
-    border-radius: 6px;
-    font-size: 12px;
-    font-weight: 600;
-    display: inline-block;
-    background-color: var(--ion-color-primary);
-    padding: 3px 10px;
+  &.show {
+    display: block;
   }
-  h2 {
-    font-size: 14px;
-    font-weight: 600;
+}
+ion-spinner {
+  margin: 50px auto;
+  display: block;
+
+}
+.loadingText {
+  margin: 20px auto;
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  &.hide {
+    display: none;
+  }
+  &.show {
+    display: block;
   }
 }

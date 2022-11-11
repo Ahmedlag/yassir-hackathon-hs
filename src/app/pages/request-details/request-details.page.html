@@ -1,0 +1,97 @@
+<ion-content>
+  <ion-grid class="nameHeader" style="margin-bottom: 20px;">
+    <ion-row>
+      <ion-col size="1" (click)="goBack()">
+        <ion-icon name="chevron-back-outline" class="backIcon"></ion-icon>
+      </ion-col>
+      <ion-col>
+        <ion-text>
+          <h1>
+            My request details
+          </h1>
+        </ion-text>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid class="requestList">
+    <ion-row>
+      <ion-col size="3">
+        <ion-thumbnail>
+          <img alt="" [src]="request.icon" />
+        </ion-thumbnail>
+      </ion-col>
+      <ion-col class="verticalAlign">
+        <ion-label>
+          <h2>{{request.service}}</h2>
+          <p style="margin-top: 10px;"><ion-icon name="time" color="primary" style="margin-right: 5px;"></ion-icon>{{request.date}} {{request.time}}</p>
+        </ion-label>
+        <ion-icon name="chevron-forward-outline" slot="end" color="medium"></ion-icon>
+      </ion-col>
+      <ion-col size="2" class="verticalAlign">
+        <ion-icon name="checkmark-circle" color="success" style="font-size: 30px;" *ngIf="request.status === 'finished'"></ion-icon>
+        <ion-icon name="hourglass" color="warning" style="font-size: 30px;" *ngIf="request.status === 'ongoing'"></ion-icon>
+        <ion-icon name="close-circle" color="primary" style="font-size: 30px;" *ngIf="request.status === 'cancelled'"></ion-icon>
+      </ion-col>
+      <ion-col size="12">
+        <p style="font-size: 12px;">
+          {{request.description}}
+        </p>
+      </ion-col>
+      <ion-col size="12">
+        <p>
+          <ion-icon name="pin" style="margin-right: 10px;font-size: 14px;" color="primary"></ion-icon> <ion-text color="medium">{{request.address}}</ion-text>
+        </p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid *ngIf="candidates && candidates.length > 0">
+    <ion-row>
+      <ion-col style="padding-left: 15px;">
+        <h5>Offers ({{candidates.length}})</h5>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid *ngIf="candidates && candidates.length > 0">
+    <ion-row>
+      <ion-col>
+        <ion-card *ngFor="let candidate of candidates" class="candidate animate__animated animate__zoomIn">
+          <ion-item lines="none">
+            <ion-avatar slot="start">
+              <img [src]="candidate.profilePicture">
+            </ion-avatar>
+            <ion-label>
+              <h2>{{candidate.fullName}} <span class="statusBadges" *ngIf="candidate.isPro">Pro</span></h2>
+              <p>5.0 <ion-icon name="star" color="warning"></ion-icon> ({{candidate.reviews}} reviews)</p>
+            </ion-label>
+            <ion-badge slot="end" class="priceBadge">{{candidate.price}} DZA</ion-badge>
+          </ion-item>
+          <ion-card-content>
+            <ion-text color="medium" style="font-size: 14px;">
+              {{candidate.description}}
+            </ion-text>
+            <ion-grid style="padding: 0;">
+              <ion-row style="padding: 0;">
+                <ion-col style="padding: 0;">
+                  <ion-button expand="block" color="light" style="margin-top: 10px;">Talk to {{candidate.firstName}}</ion-button>
+                </ion-col>
+                <ion-col style="padding: 0;">
+                  <ion-button expand="block" color="danger" style="margin-top: 10px;" (click)="hire(candidate)">Hire now</ion-button>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid *ngIf="!candidates || candidates.length <1">
+    <ion-row>
+      <ion-col style="text-align: center;">
+        <ion-spinner name="crescent" style="margin: 20px auto; display: block;"></ion-spinner>
+        <h5 style="text-align: center; max-width: 80%; margin: auto;">
+          We are looking for the best providers for you...
+        </h5>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

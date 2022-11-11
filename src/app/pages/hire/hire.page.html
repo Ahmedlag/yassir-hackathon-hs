@@ -1,0 +1,148 @@
+<ion-content>
+  <ion-grid class="nameHeader" style="margin-bottom: 20px;">
+    <ion-row>
+      <ion-col size="1" (click)="goBack()">
+        <ion-icon name="chevron-back-outline" class="backIcon"></ion-icon>
+      </ion-col>
+      <ion-col>
+        <ion-text>
+          <h1>
+           Order Details
+          </h1>
+        </ion-text>
+      </ion-col>
+      <ion-col size="1">
+        <ion-icon name="close" (click)="close()"></ion-icon>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-text style="margin-left: 10px;">
+          N° : EOK5477
+        </ion-text>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card class="candidate">
+          <ion-item lines="none">
+            <ion-avatar slot="start">
+              <img [src]="candidates.profilePicture">
+            </ion-avatar>
+            <ion-label>
+              <h2>{{candidates.fullName}}</h2>
+              <p>5.0 <ion-icon name="star" color="warning"></ion-icon> (154 reviews)</p>
+            </ion-label>
+            <ion-badge slot="end" class="priceBadge">{{candidates.price}} DZA</ion-badge>
+          </ion-item>
+          <ion-card-content>
+            <ion-text color="medium" style="font-size: 14px;">
+              {{candidates.description}}
+            </ion-text>
+            <ion-grid style="padding: 0;">
+              <ion-row style="padding: 0;">
+                <ion-col style="padding: 0;">
+                  <ion-button expand="block" color="danger" style="margin-top: 10px;" (click)="goToJobber()">See profile</ion-button>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid style="padding: 20px; font-size: 14px;">
+    <ion-row>
+      <ion-col size="3">
+        <ion-label color="medium">
+          Date
+        </ion-label>
+      </ion-col>
+      <ion-col style="text-align: right; font-weight: 600;">
+        12/12/2020
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="3">
+        <ion-label color="medium">
+          Time
+        </ion-label>
+      </ion-col>
+      <ion-col style="text-align: right; font-weight: 600;">
+        11:00
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="3">
+        <ion-label color="medium">
+          Address
+        </ion-label>
+      </ion-col>
+      <ion-col style="text-align: right; font-weight: 600;">
+        st 12, 12000, Algiers, Algeria
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col style="padding: 20px;">
+        <h6 >Price</h6>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid style="padding: 20px; font-size: 14px;">
+    <ion-row>
+      <ion-col size="3">
+        <ion-label color="medium">
+          Price
+        </ion-label>
+      </ion-col>
+      <ion-col style="text-align: right; font-weight: 600;">
+        {{candidates.price}} DZA
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="3">
+        <ion-label color="medium">
+          Insurance
+        </ion-label>
+      </ion-col>
+      <ion-col style="text-align: right; font-weight: 600;">
+        2%
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="3">
+        <ion-label color="medium">
+          Promo
+        </ion-label>
+      </ion-col>
+      <ion-col style="text-align: right; font-weight: 600;">
+        -20,00 DZA
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="3">
+        <ion-label color="medium">
+          To pay
+        </ion-label>
+      </ion-col>
+      <ion-col style="text-align: right; font-weight: 600;">
+        <ion-label color="primary">{{candidates.price - 20}} DZA</ion-label>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="block" color="light" style="margin-top: 10px;" (click)="goToJobber()">Cancel</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

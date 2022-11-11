@@ -13,7 +13,7 @@ export class ServicesPage implements OnInit {
   constructor(private sharedServices: SharedService, private nav: NavController) { }
 
   ngOnInit() {
-    this.sharedServices.category.subscribe((services) => {
+    this.sharedServices.service.subscribe((services) => {
       this.selectedServices = services;
     });
   }
@@ -24,5 +24,10 @@ export class ServicesPage implements OnInit {
 
   goBack() {
     this.nav.pop();
+  }
+
+  setService(homeCleaning: string) {
+    this.sharedServices.setService(homeCleaning);
+    this.nav.navigateForward('/flow');
   }
 }

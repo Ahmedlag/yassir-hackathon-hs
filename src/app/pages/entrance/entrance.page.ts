@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {NavController} from "@ionic/angular";
-
+import { SplashScreen } from '@capacitor/splash-screen';
 @Component({
   selector: 'app-entrance',
   templateUrl: './entrance.page.html',
@@ -13,12 +13,14 @@ export class EntrancePage implements OnInit {
   constructor(private nav: NavController) { }
 
   ngOnInit() {
-    setTimeout(() => {
-      this.showSpinner = true;
+    SplashScreen.hide().then(() => {
       setTimeout(() => {
-        this.nav.navigateForward('/demo');
-      }, 2000);
-    }, 1000);
+        this.showSpinner = true;
+        setTimeout(() => {
+          this.nav.navigateForward('/demo');
+        }, 2000);
+      }, 1000);
+    });
   }
 
 }

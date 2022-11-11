@@ -1,6 +1,14 @@
 {
 	"appId": "io.ionic.starter",
-	"appName": "yassir-home-services-proto",
+	"appName": "Yassir services",
 	"webDir": "www",
-	"bundledWebRuntime": false
+  "bundledWebRuntime": true,
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 3000
+    }
+  },
+  "ios": {
+    "contentInset": "always"
+  }
 }

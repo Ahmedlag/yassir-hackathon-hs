@@ -1,0 +1,169 @@
+<ion-content>
+  <ion-grid class="nameHeader" style="margin-bottom: 20px;">
+    <ion-row>
+      <ion-col size="1" (click)="goBack()">
+        <ion-icon name="chevron-back-outline" class="backIcon"></ion-icon>
+      </ion-col>
+      <ion-col>
+        <ion-text>
+          <h1>
+            {{candidate.fullName}}
+          </h1>
+        </ion-text>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-thumbnail class="mainAvatar" style="margin: 10px auto; width: 100px; height: 100px; border-radius: 100%;">
+          <img [src]="candidate.profilePicture" style="border-radius: 100%;">
+        </ion-thumbnail>
+        <ion-text>
+          <h2 style="text-align: center;">
+            {{candidate.fullName}}
+          </h2>
+          <p style="text-align: center;">
+            5.0 <ion-icon name="star" style="color: #FFD700;"></ion-icon> <span style="font-size: 12px;">({{candidate.reviews}} reviews)</span>
+          </p>
+        </ion-text>
+        <ion-chip color="primary" style="margin: auto; display: block; max-width: 100px; text-align: center;">
+         <ion-label color="primary">
+           321 missions
+         </ion-label>
+        </ion-chip>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col style="padding: 10px;">
+        <h6 style="margin: 10px 0;">About</h6>
+        <ion-text color="medium" style="font-size: 12px; line-height: 10px;">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue, sapien in ...
+        </ion-text>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col style="padding: 10px;">
+        <h6 style="margin: 10px 0;">Skills</h6>
+        <ion-row>
+          <ion-col size="2">
+            <ion-thumbnail style="border-radius: 8px;">
+              <img src="../assets/jobber/experience.svg" style="border-radius: 8px;">
+            </ion-thumbnail>
+          </ion-col>
+          <ion-col class="verticalAlign">
+            <ion-text color="medium" style="font-size: 14px;">
+              + 10 years experience
+            </ion-text>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col style="padding: 10px;">
+        <h6 style="margin: 10px 0;">Work informations</h6>
+        <ion-row>
+          <ion-col size="2">
+            <ion-thumbnail style="border-radius: 8px;">
+              <img src="../assets/jobber/work.svg" style="border-radius: 8px;">
+            </ion-thumbnail>
+          </ion-col>
+          <ion-col class="verticalAlign">
+            <ion-text color="medium" style="font-size: 14px;">
+              Possède Coupe-tube, Clé à siphon, Clé à molette, Déboucheur, Clé à bonde
+            </ion-text>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col style="padding: 10px;">
+        <h6 style="margin: 0;">Feedbacks</h6>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid style="padding: 0">
+    <ion-row style="padding: 0">
+      <ion-col style="padding: 0;">
+        <ion-card style="margin: 10px;">
+          <ion-card-header>
+            <ion-card-title>
+              <ion-row>
+                <ion-col size="2">
+                  <ion-thumbnail style="border-radius: 100%;">
+                    <img src="https://randomuser.me/api/portraits/men/89.jpg" style="border-radius: 100%;">
+                  </ion-thumbnail>
+                </ion-col>
+                <ion-col class="verticalAlign">
+                  <ion-card-subtitle>
+                    John Doe
+                  </ion-card-subtitle>
+                   <ion-card-subtitle>5.0 <ion-icon name="star" style="color: #FFD700;"></ion-icon></ion-card-subtitle>
+                </ion-col>
+              </ion-row>
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-text color="medium" style="font-size: 12px; line-height: 10px;">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue, sapien in ...
+            </ion-text>
+            <p style="text-align: right;">
+              <ion-text style="font-size: 12px; line-height: 10px; color: #727272">
+                12/12/2020
+              </ion-text>
+            </p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row style="padding: 0">
+      <ion-col style="padding: 0;">
+        <ion-card style="margin: 10px;">
+          <ion-card-header>
+            <ion-card-title>
+              <ion-row>
+                <ion-col size="2">
+                  <ion-thumbnail style="border-radius: 100%;">
+                    <img src="https://randomuser.me/api/portraits/men/19.jpg" style="border-radius: 100%;">
+                  </ion-thumbnail>
+                </ion-col>
+                <ion-col class="verticalAlign">
+                  <ion-card-subtitle>
+                    Charles Smith
+                  </ion-card-subtitle>
+                  <ion-card-subtitle>5.0 <ion-icon name="star" style="color: #FFD700;"></ion-icon></ion-card-subtitle>
+                </ion-col>
+              </ion-row>
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-text color="medium" style="font-size: 12px; line-height: 10px;">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue, sapien in ...
+            </ion-text>
+            <p style="text-align: right;">
+              <ion-text style="font-size: 12px; line-height: 10px; color: #727272">
+                12/12/2020
+              </ion-text>
+            </p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid style="padding: 10px;">
+    <ion-row style="padding: 0;">
+      <ion-col style="padding: 0;">
+        <ion-button expand="block" color="light" style="margin-top: 10px;">Talk to William</ion-button>
+      </ion-col>
+      <ion-col style="padding: 0;">
+        <ion-button expand="block" color="danger" style="margin-top: 10px;" (click)="hire()">Hire now</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

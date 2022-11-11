@@ -25,4 +25,9 @@ export class CategoriesPage implements OnInit {
   goBack() {
     this.nav.pop();
   }
+
+  selectServices(service) {
+    this.sharedServices.setService(service);
+    this.nav.navigateForward('/services');
+  }
 }

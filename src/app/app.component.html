@@ -6,19 +6,19 @@
     </div>
     <ion-grid>
       <ion-row >
-        <ion-col (click)="selected = 'home'" [ngClass]="{'active' : selected === 'home'}">
+        <ion-col (click)="navTo('home')" [ngClass]="{'active' : selected === 'home'}">
           <ion-icon [name]="selected === 'home' ? 'home' : 'home-outline'" [color]="selected === 'home' ? 'primary' : 'medium'"></ion-icon>
         </ion-col>
-        <ion-col (click)="selected = 'newspaper'" [ngClass]="{'active' : selected === 'newspaper'}">
-          <ion-icon [name]="selected === 'newspaper' ? 'newspaper' : 'newspaper-outline'" [color]="selected === 'newspaper' ? 'primary' : 'medium'"></ion-icon>
+        <ion-col (click)="navTo('requests')" [ngClass]="{'active' : selected === 'requests'}">
+          <ion-icon [name]="selected === 'requests' ? 'newspaper' : 'newspaper-outline'" [color]="selected === 'requests' ? 'primary' : 'medium'"></ion-icon>
         </ion-col>
         <ion-col>
         </ion-col>
-        <ion-col (click)="selected = 'chatbubbles'" [ngClass]="{'active' : selected === 'chatbubbles'}">
-          <ion-icon [name]="selected === 'chatbubbles' ? 'chatbubbles' : 'chatbubbles-outline'" [color]="selected === 'chatbubbles' ? 'primary' : 'medium'"></ion-icon>
+        <ion-col (click)="navTo('chat')" [ngClass]="{'active' : selected === 'chat'}">
+          <ion-icon [name]="selected === 'chat' ? 'chatbubbles' : 'chatbubbles-outline'" [color]="selected === 'chat' ? 'primary' : 'medium'"></ion-icon>
         </ion-col>
-        <ion-col (click)="selected = 'person'" [ngClass]="{'active' : selected === 'person'}">
-          <ion-icon [name]="selected === 'person' ? 'person' : 'person-outline'" [color]="selected === 'person' ? 'primary' : 'medium'"></ion-icon>
+        <ion-col (click)="navTo('profile')" [ngClass]="{'active' : selected === 'profile'}">
+          <ion-icon [name]="selected === 'profile' ? 'person' : 'person-outline'" [color]="selected === 'profile' ? 'primary' : 'medium'"></ion-icon>
         </ion-col>
       </ion-row>
     </ion-grid>
